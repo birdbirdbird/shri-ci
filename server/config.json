@@ -1,0 +1,5 @@
+{
+    "host": "localhost",
+    "port": 8000,
+    "repo": "https://github.com/creativedeveloper-net/npm-package-example"
+}

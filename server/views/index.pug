@@ -1,0 +1,21 @@
+html
+  head
+    title Server
+    link(rel='stylesheet', href='/miligram.min.css')
+  body
+  div.container
+    div.row
+      div.column.column-50.column-offset-25
+        form(action='/build' method='post')
+          label Commit hash
+          input(name='hash', placeholder='hash')
+          label Command
+          input(name='command', placeholder='command')
+          button(type='submit') Run build
+
+        h3 Builds
+          table: tbody
+            each build in builds
+              tr
+                td: a(href=`/build/${build.buildId}`)= build.buildId
+                td= build.status

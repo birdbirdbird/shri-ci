@@ -1,0 +1,24 @@
+html
+  head
+    title Server build
+    link(rel='stylesheet', href='/miligram.min.css')
+  body
+    div.container
+      h2 Build: #{build.buildId}
+      div Date: #{new Date(build.startDate).toISOString()} — #{new Date(build.endDate).toISOString()}
+      div Status: #{build.status}
+      div Stdout:
+      pre 
+        code= build.stdout
+      div Stderr:
+      pre 
+        code= build.stderr
+
+    //-       div= build.buildId
+    //-       div= build.startDate
+    //-       div= build.endDate
+    //-       div= build.status
+    //-       div= build.command
+    //-       div= build.stdout
+    //-       div= build.stderr
+
